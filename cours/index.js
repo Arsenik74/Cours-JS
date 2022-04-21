@@ -143,3 +143,58 @@ console.log(string2.replace("Javascript", "PHP"));
 // Permet de remplacer du texte par un autre. Dans notre exemple ça remplacera Javascript par pHP.
 
 // Methodes Numbers
+
+let number2 = 42.1234;
+let numberString = "42.23 est un chiffre";
+console.log(number2.toFixed(2));
+//  En faisant ça la console nous renverra 42.12 et non 42.1234
+console.log(parseInt("43"));
+//  change une chaine de caractères en number
+
+console.log(parseFloat(numberString));
+// parseFloat prend même les chiffres après la virgule.
+
+// Math
+
+console.log(Math.PI); // produit PI
+console.log(Math.round); // Arrondi par exemple si on met 4.5 il arrondira à 5
+console.log(Math.floor(4.9));
+// arrondi au plus bas
+console.log(Math.ceil(4.1));
+// arrondi au plus haut
+console.log(Math.pow(2, 7));
+// puissance
+console.log(Math.sqrt(16));
+// racine carré
+
+console.log(Math.random() * 50);
+// Donnera un chiffre entre 0 et 50.
+
+console.log(Math.floor(Math.random() * 50));
+// Donnera un chiffre plein entre 0 et 50.
+
+//---------------
+// Methodes Array
+// --------------
+
+let array3 = ["Javascript", "Php", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+// let newArray = array3.concat(array4);
+
+// console.log(newArray);
+
+let newArray = [...array3, ...array4];
+
+console.log(newArray);
+
+// Avec cette méthode on concatene deux tableaux ensemble.
+
+console.log(array3.join(" "));
+// on crée une chaine de caractères avec dans l'exemple un espace. On peut mettre ce qu'on veut...
+
+// console.log(array3.slice(1));
+console.log(newArray.slice(3, 5));
+// garde les éléments présent entre les accolades. Dans l'exemple le log affichera Ruby et solidity.
+
+console.log(array3.indexOf("Python"));
