@@ -198,3 +198,46 @@ console.log(newArray.slice(3, 5));
 // garde les éléments présent entre les accolades. Dans l'exemple le log affichera Ruby et solidity.
 
 console.log(array3.indexOf("Python"));
+// Donne l'index.
+
+array3.forEach((languages) => console.log(languages));
+// a chaque tour loguera la valeur.
+
+console.log(array3.every((language) => "Php"));
+console.log(array3.some((language) => "Php"));
+
+let shift = array3.shift();
+// Permet d'enlever le premier élément..
+
+console.log(array3.pop());
+// Permet d'enlever le dernier élément..
+
+const restArray = array3.splice(1, 1, "C++");
+console.log(array3);
+
+// IMPORTANT //
+
+let arrayNumber = [4, 74, 28, 12, 1];
+console.log(arrayNumber.reduce((x, y) => x + y));
+// Dans cet exemple permet de calculer l'ensemble des number présents dans arrayNmuber.
+
+arrayNumber.push("Coucou");
+
+console.log(arrayNumber);
+// Permet d'ajouter ce qu'on veut. Par exemple là on a ajouter coucou a arrayNumber.
+
+// FILTER (filtrer), SORT (trier), MAP (lister les chosees, un peu comme un foreach)
+
+console.log(arrayNumber.filter((number) => number > 10));
+// En faisant ça on a filtré les number > 10 dans arrayNumber.
+// console.log(arrayNumber.sort());
+
+console.log(arrayNumber.sort((a, b) => b - a));
+// En faisaint ça on vient de classer les chiffres du plus grand au plus petit. Si on aurait fait a - b ça aurait été classé du plus petit au plus grand.
+
+// arrayNumber.map((number) => (document.body.innerHTML += `<li> ${number}</li>`));
+
+document.body.innerHTML = arrayNumber
+  .map((number) => `<li> ${number}</li>`)
+  .join("");
+// en faisant join("") on a supprimé les virgules entre chaques number.
