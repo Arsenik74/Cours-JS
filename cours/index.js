@@ -241,3 +241,24 @@ document.body.innerHTML = arrayNumber
   .map((number) => `<li> ${number}</li>`)
   .join("");
 // en faisant join("") on a supprimé les virgules entre chaques number.
+
+//-----------------
+// Méthodes Objects
+// ----------------
+
+document.body.innerHTML = data
+  .filter((user) => user.pseudo.includes("i"))
+  .sort((a, b) => b.age - a.age)
+  .map(
+    (user) =>
+      `
+<div class="user-card">
+<h2>${user.pseudo}</h2>
+<p> Age : ${user.age}</p>
+<p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+</div>
+`
+  )
+  .join("");
+
+// En faisant le sort on a classé l'age des utilisateurs en décroissant. Avec map on a lister les utilisateurs. Avec les guillements de la touche 7 on concatene les divers choses que l'on veut. Pour afficher si l'utilisateur est un membre ou un admin on fait une terner, dans l'exemple user.admin ? -> si tu es vrai affiche moi "modérateur" : ->sinon affiche "membre".
