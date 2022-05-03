@@ -262,3 +262,44 @@ document.body.innerHTML = data
   .join("");
 
 // En faisant le sort on a classé l'age des utilisateurs en décroissant. Avec map on a lister les utilisateurs. Avec les guillements de la touche 7 on concatene les divers choses que l'on veut. Pour afficher si l'utilisateur est un membre ou un admin on fait une terner, dans l'exemple user.admin ? -> si tu es vrai affiche moi "modérateur" : ->sinon affiche "membre".
+
+// -----------------
+// Les dates
+// -----------------
+
+// Date classique
+let date = new Date();
+console.log(date);
+// Donne la date du jour...
+
+// Timestamp
+let timestamp = Date.parse(date);
+console.log(timestamp);
+
+// IsoString
+
+console.log(date.toISOString());
+
+function dateParser(chaine) {
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
+  return newDate;
+}
+
+console.log(dateParser(date));
+
+// ----------------
+// Destructuring
+// ----------------
+
+let moreData = {
+  destVar: ["Element 1", "Element 2"],
+};
+
+const { destVar } = moreData;
+console.log(destVar);
